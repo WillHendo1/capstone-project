@@ -1,11 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from "./components/HomePage";
-import BlogsPage from "./components/BlogsPage";
-import CategoriesPage from "./components/CategoriesPage";
-import Navbar from "./components/Navbar";
-import NotFoundPage from "./components/PageNotFound";
 
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import BlogsPage from "./pages/BlogsPage";
+import CategoriesPage from "./pages/CategoriesPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import NotFoundPage from "./pages/PageNotFound";
+import ProfilePage from "./pages/ProfilePage";
+import RegisterPage from "./pages/RegisterPage";
+
+
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -13,9 +20,12 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/categories" element={<CategoriesPage />} />
-          <Route path="*" element={<NotFoundPage />} /> {/* Catch-all route for undefined paths */}
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          
+          <Route path="*" element={<NotFoundPage />} /> {}
         </Routes>
       </div>
     </Router>

@@ -22,8 +22,13 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-              <NavLink to="/" className="nav-link" activeClassName="active">
+              <NavLink to="/home" className="nav-link" activeClassName="active">
                 Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/categories" className="nav-link" activeClassName="active">
+                Categories
               </NavLink>
             </li>
             <li className="nav-item">
@@ -31,9 +36,10 @@ export default function Navbar() {
                 Blogs
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink to="/categories" className="nav-link" activeClassName="active">
-                Categories
+              <NavLink to="/about" className="nav-link" activeClassName="active">
+                About
               </NavLink>
             </li>
 
