@@ -36,10 +36,24 @@ export default function Navbar() {
                 Blogs
               </NavLink>
             </li>
-
             <li className="nav-item">
               <NavLink to="/about" className="nav-link" activeClassName="active">
                 About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/profile" className="nav-link" activeClassName="active">
+                Profile
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login" className="nav-link" activeClassName="active">
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/register" className="nav-link" activeClassName="active">
+                Register
               </NavLink>
             </li>
 

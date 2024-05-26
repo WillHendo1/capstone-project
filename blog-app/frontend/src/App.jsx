@@ -24,7 +24,8 @@ function App() {
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/about" element={<AboutPage />} />
-          
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<NotFoundPage />} /> {}
         </Routes>
       </div>
