@@ -27,8 +27,13 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/categories" className="nav-link" activeClassName="active">
+              <NavLink to="/category" className="nav-link" activeClassName="active">
                 Categories
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/blog" className="nav-link" activeClassName="active">
+                Blog
               </NavLink>
             </li>
             <li className="nav-item">

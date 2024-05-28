@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import Heading from "../../components/Heading";
 import Navbar from "../../components/Navbar";
-import BlogGrid from "../../components/BlogGrid";
-import Footer from "../../components/Footer";
+import Heading from "../../components/Heading";
 import SubHeading from "../../components/SubHeading";
+import BlogGrid from "../../components/BlogGrid";
 import CategoryList from "../../components/CategoryList";
+import Footer from "../../components/Footer";
 
-// Week 1: Import the blogPosts and categories from the dummy-data.json file
-const data = require("../../dummy-data.json");
-const blogs = data.blogPosts.reverse();
-const categories = data.categories;
+import blogService from "../../services/blogService";
 
-export default function HomePage() {
+export default function Home() {
+  const [blogs, setBlogs] = useState();
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const blogsRes = await blogService.getBlogs();
+
+        setBlogs(blogsRes);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <Navbar />
+      <Heading />
       <div className="container">
-        <Heading />
-        <SubHeading subHeading={"Recent Blog Posts"} />
-        <BlogGrid blogPosts={blogs}></BlogGrid>
-        <SubHeading subHeading={"Categories"} />
-        <CategoryList categories={categories}></CategoryList>
+        <SubHeading subHeading={"Recent blog posts"} />
+        <BlogGrid blogPosts={blogs} />
+        <CategoryList categories={[]} />
         <Footer />
       </div>
     </>
