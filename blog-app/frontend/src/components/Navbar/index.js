@@ -1,5 +1,6 @@
 import React from "react";
-import {NavLink} from 'react-router-dom';
+
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -21,47 +22,16 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
-              <NavLink to="/home" className="nav-link" activeClassName="active">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/home">
                 Home
-              </NavLink>
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink to="/category" className="nav-link" activeClassName="active">
-                Categories
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/blog" className="nav-link" activeClassName="active">
-                Blog
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/blogs" className="nav-link" activeClassName="active">
+              <Link className="nav-link active" aria-current="page" to="/blogs">
                 Blogs
-              </NavLink>
+              </Link>
             </li>
-            <li className="nav-item">
-              <NavLink to="/about" className="nav-link" activeClassName="active">
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/profile" className="nav-link" activeClassName="active">
-                Profile
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/login" className="nav-link" activeClassName="active">
-                Login
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/register" className="nav-link" activeClassName="active">
-                Register
-              </NavLink>
-            </li>
-
           </ul>
         </div>
       </div>
